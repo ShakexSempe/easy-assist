@@ -1,0 +1,211 @@
+@use '../abstracts';
+// ABOUT SECTION
+.about {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5vh;
+    padding: 10vh 5vw;
+    background-color: abstracts.$background-light;
+    position: relative;
+    
+    // DESKTOP FLEX
+    @include abstracts.md {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    // COL RIGHT = TITLE & ARTICLE
+    .col-right {
+        position: relative;
+        // ARTICLE CONTAINER
+        .article-container {
+            
+            article {
+                .cv-btn {
+                    margin-top: .5rem;
+                }
+                .about-intro {
+                    p {
+                        font-size: abstracts.$font-clamp-xsm;
+                        // CAPITAL B FIRST LETTER
+                        &.intro {
+                            font-weight: 500;
+
+                            &.intro::first-letter {
+                                font-size: 2rem;
+                                font-size: clamp(2rem, 5vw, 2.25rem);
+                                float: left;
+                                background: abstracts.$overlay-blue-darker;
+                                color: abstracts.$text-light;
+                                padding: 0 .1em;
+                                margin-right: .1em;
+                                border-radius: .25rem;
+                                box-shadow: 3px 3px 3px rgba(0, 0, 0, .100);
+                            }
+                        }
+
+
+                    }
+                }
+
+            
+
+                .article-body {
+                    color: abstracts.$overlay-blue-darker;
+                    margin-top: 5vh;
+                    .body-item {
+                        padding-bottom: .5rem;
+                        margin-bottom: 5vh;
+                        position: relative;
+                        border-bottom: 1px solid abstracts.$overlay-blue-light;
+                        transition: border .5s;
+                        
+                        @include abstracts.lg {
+                            margin-bottom: 10vh;
+                        }
+                        i {
+                            font-size: 2rem;
+                            margin-bottom: .5rem;
+                            color: abstracts.$overlay-blue-dark;
+                        }
+                        .body-item-title {
+                            color: abstracts.$overlay-blue-dark;
+                            margin-bottom: .5rem;
+                            font-size: 1rem;
+                            font-size: abstracts.$font-clamp-sm;
+                        }
+
+                        p {
+                            margin: 0.5rem 0 1rem;
+                            font-size: 0.95rem;
+                            font-size: abstracts.$font-clamp-xsm;
+                        }
+
+                        a {
+                            // border: 2px solid red;
+                            color: abstracts.$overlay-blue-light;
+                            font-size: 0.95rem;
+                            font-size: abstracts.$font-clamp-xsm;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            i {
+                                font-size: 1rem;
+                                margin-right: .5rem;
+                                transition: .25s;
+                            }
+                            &:hover {
+                                color: abstracts.$span-crimson;
+                                i {
+                                    transform: translateX(.25rem);
+                                    opacity: .9;
+                                }
+                            }
+                        }
+
+                        // BODY ITEM HOVER 
+                        &:hover {
+                            background: #fafafa;
+                            border-bottom-color: transparent;
+                            transition: .25s;
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons-container {
+                margin: 1rem 0;
+
+                a {
+                    width: 11rem;
+                    width: clamp(11rem, 15vw, 12rem);
+                }
+            }
+
+        }
+
+    }
+    // COL LEFT = ABOUT IMAGE(S)
+    .col-left {
+        border-radius: abstracts.$brand-br;
+        width: 70%;
+        height: 60vh;
+        margin-inline: auto;
+        margin-bottom: 5vh;
+        @include abstracts.xsm {
+            height: 50vh;
+        }
+        @include abstracts.md {
+            width: 100%;
+            height: 70vh;
+            position: sticky;
+            top: 15vh;
+        }
+        // ABOUT IMG
+        .about-img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: abstracts.$brand-br;
+            transition: .5s ease;
+
+            img {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+                transition: 1s;
+                animation: fade-1 4s infinite;
+
+                @keyframes fade-1 {
+                    50% {
+                        opacity: 0;
+                    }
+                }
+
+                &.about-img-2 {
+                    opacity: 0;
+                    object-position: top;
+                    animation: fade-2 4s infinite;
+
+                    @keyframes fade-2 {
+                        50% {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                // DESKTOP IMAGE
+                @include abstracts.sm {
+                    object-fit: contain;
+                    object-position: top;
+                }
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                    animation: none;
+
+                    &.about-img-2 {
+                        opacity: 0;
+                        animation: none;
+                    }
+                }
+            }
+
+            // ABOUT PAGE IMAGE - NO ANIMATION
+            &.about-page-img {
+                img {
+                    animation: none;
+                }
+            }
+
+        }
+    }
+}

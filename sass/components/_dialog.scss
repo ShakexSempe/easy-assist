@@ -1,0 +1,86 @@
+@use '../abstracts';
+
+dialog {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: auto ;
+    padding: 1rem;
+    
+    background: radial-gradient( #f4f4f4, #fff 50%);
+    color: abstracts.$overlay-blue-light;
+    
+    border-color: abstracts.$overlay-blue-darker;
+    border-radius: 0.5rem;
+    scale: .95;
+    opacity: 0;
+    
+    &[open] {
+        opacity: 1;
+        scale: 1;
+        transition: all 300ms;
+    }
+
+    @include abstracts.sm {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    &::backdrop {
+        background: abstracts.$overlay-trans;
+    }
+
+    [aria-label="close"] {
+        float: right;
+        margin: 0;
+    }
+
+
+    button {
+        text-transform: capitalize;
+        padding: 0.125rem;
+        margin: 2rem 0;
+        cursor: pointer;
+        border-radius: 0.25rem;
+
+        &.modal-btn {
+            background: abstracts.$button-crimson;
+            padding: 0.5rem 1rem;
+            color: #fff;
+        }
+
+        &:focus {
+            outline-color: abstracts.$span-crimson;
+            outline-offset: 4px;
+            transition: 250ms;
+        }
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-size: abstracts.$font-clamp-sm;
+        text-wrap: pretty;
+        text-wrap: balance;
+        text-transform: capitalize;
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+
+        span {
+            color: abstracts.$brand;
+        }
+    }
+
+    p {
+        &::first-letter {
+            text-transform: capitalize;
+        }
+        &::after {
+            content: '.';
+        }
+    }
+}
