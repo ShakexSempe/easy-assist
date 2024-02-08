@@ -47,9 +47,9 @@ section {
   width: 100%;
 }
 section .section-title {
-  font-size: 2.5rem;
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  color: #29323d;
+  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: #003300;
   margin-bottom: 10vh;
   text-transform: uppercase;
   -webkit-box-reflect: below -0.9rem linear-gradient(transparent, #0003);
@@ -97,7 +97,7 @@ section .section-title.active-item span {
 }
 
 .intro {
-  background: linear-gradient(130deg, #fafafa 40%, #ddd);
+  background: linear-gradient(130deg, #fafafa 50%, #f0f0f0 70%);
   padding: 5vh 5vw;
   min-height: 50vh;
 }
@@ -753,6 +753,21 @@ form button:hover::after {
 }
 
 /* end of progress bar*/
+.about {
+  min-height: 70vh;
+  padding: 5vh 5vw;
+  background: #f0f0f0;
+}
+.about article p {
+  margin-bottom: 1rem;
+}
+.about article p:first-letter {
+  text-transform: capitalize;
+}
+.about article p::after {
+  content: ".";
+}
+
 #contact {
   scroll-margin-top: 5vh;
   background: #f4f4f4;
@@ -930,7 +945,7 @@ form button:hover::after {
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  color: darkgreen;
+  color: #000;
 }
 @media (min-width: 1024px) {
   #footer .footer .footer-bottom {
@@ -962,9 +977,9 @@ form button:hover::after {
 #footer .footer .footer-bottom .footer-item h3 {
   text-transform: capitalize;
   margin-bottom: 1rem;
+  color: darkgreen;
 }
 #footer .footer .footer-bottom .footer-item p {
-  color: green;
   text-transform: capitalize;
   line-height: 1.6;
 }
@@ -982,8 +997,6 @@ form button:hover::after {
   transition: 0.25s;
 }
 #footer .footer .footer-bottom .footer-item .footer-list li a {
-  color: #f4f4f4;
-  color: green;
   transition: 0.25s;
 }
 #footer .footer .footer-bottom .footer-item .footer-list li .icon {

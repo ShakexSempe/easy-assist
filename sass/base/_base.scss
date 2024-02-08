@@ -48,10 +48,10 @@ section {
     width: 100%;
 
     .section-title {
-        font-size: 2.5rem;
-        font-size: abstracts.$font-clamp-lg;
+        font-size: 2rem;
+        font-size: abstracts.$font-clamp-md;
 
-        color: abstracts.$overlay-blue-dark;
+        color: abstracts.$brand-dark;
         margin-bottom: 10vh;
         text-transform: uppercase;
         -webkit-box-reflect: below -.9rem linear-gradient(transparent, #0003);
@@ -114,7 +114,7 @@ section {
 }
 
 .intro {
-    background: linear-gradient(130deg, #fafafa 40%, #ddd);
+    background: linear-gradient(130deg, #fafafa 50%, hsl(0, 0%, 94%) 70%);
     padding: 5vh 5vw;
     min-height: 50vh;
     p {

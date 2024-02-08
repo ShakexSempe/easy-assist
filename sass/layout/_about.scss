@@ -1,2 +1,19 @@
 @use '../abstracts';
 // ABOUT SECTION
+.about {
+    min-height: 70vh;
+    padding: 5vh 5vw;
+    background: hsl(0, 0%, 94%);
+
+    article {
+        p {
+            margin-bottom: 1rem;
+            &:first-letter {
+                text-transform: capitalize;
+            }
+            &::after {
+                content: '.';
+            }
+        }
+    }
+}
