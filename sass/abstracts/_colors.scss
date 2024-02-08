@@ -49,7 +49,7 @@ $overlay-blue-darkest:hsl(213, 18%, 10%);
 $overlay-blue-black:hsl(213, 18%, 5%);
 $overlay-black:hsl(213, 18%, 1%);
 $overlay-blue-light: hsl(211, 16%, 33%);
-$overlay-footer: linear-gradient(0deg, #000, #15191e);
+$overlay-footer: linear-gradient(0deg, hsl(120, 100%, 10%), hsl(120, 100%, 15%));
 
 // NAV COLORS
 $nav-background: #29323c;

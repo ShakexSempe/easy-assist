@@ -45,15 +45,17 @@
         transition: 1s ease;
         // background-color: abstracts.$overlay-blue-black;
         background-color: abstracts.$brand;
+        background-color: #ffff;
         border-radius: abstracts.$border-radius-sm;
-        border: 2px solid abstracts.$brand;
         border: 1px solid #fff;
+        border: 1px solid abstracts.$brand;
         a {
             padding: 0.125rem 0.25rem;
             display: block;
         }
         p {
             color: abstracts.$text-light;
+            color: abstracts.$brand;
             font-weight: 600;
             font-size: 0.75rem;
             font-size: clamp(0.85rem, 1.25vw, 1rem);
