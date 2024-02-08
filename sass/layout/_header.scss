@@ -386,6 +386,7 @@ $header-height: 8vh;
                         width: 0%;
                         height: 2px;
                         background-color: abstracts.$brand;
+                        background-color: #fff;
                         transition: 250ms ease;
                     }
 
@@ -408,7 +409,7 @@ $header-height: 8vh;
                         
 
                         &.active {
-                            color: abstracts.$brand;
+                            // color: abstracts.$brand;
 
                             &::before {
                                 width: 50%;
@@ -472,6 +473,14 @@ $header-height: 8vh;
     #nav {
         .logo {
             transform: translateY(-10vh);
+        }
+
+        ul {
+            li {
+                a {
+                    color: #000;
+                }
+            }
         }
     }
 }

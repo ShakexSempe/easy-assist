@@ -1771,6 +1771,7 @@ form button:hover::after {
     width: 0%;
     height: 2px;
     background-color: green;
+    background-color: #fff;
     transition: 250ms ease;
   }
   #nav .nav-list ul li a {
@@ -1786,9 +1787,6 @@ form button:hover::after {
   }
   #nav .nav-list ul li a::after {
     display: none;
-  }
-  #nav .nav-list ul li a.active {
-    color: green;
   }
   #nav .nav-list ul li a.active::before {
     width: 50%;
@@ -1824,6 +1822,9 @@ form button:hover::after {
 }
 .hero-header #nav .logo {
   transform: translateY(-10vh);
+}
+.hero-header #nav ul li a {
+  color: #000;
 }
 
 .header-io::after {
@@ -1879,6 +1880,11 @@ form button:hover::after {
 @media (min-width: 768px) {
   .hero-grid {
     padding: 15vh 5vw;
+    grid-template-columns: 45% auto;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    grid-template-areas: "grid-title grid-image" "grid-subtitle grid-image";
   }
 }
 @media (min-width: 820px) {

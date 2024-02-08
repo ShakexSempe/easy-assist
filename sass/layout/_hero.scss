@@ -57,12 +57,12 @@
 
     @include abstracts.md {
         padding: 15vh 5vw;
-        // grid-template-columns: 45% auto;
-        // grid-template-rows:  1fr 1fr;
-        // column-gap: 1rem;
-        // row-gap: 1rem;
-        // grid-template-areas: 'grid-title grid-image' 
-        //                         'grid-subtitle grid-image';
+        grid-template-columns: 45% auto;
+        grid-template-rows:  1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        grid-template-areas: 'grid-title grid-image' 
+                                'grid-subtitle grid-image';
     }
 
     @include abstracts.lg {
