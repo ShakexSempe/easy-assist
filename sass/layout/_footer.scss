@@ -3,6 +3,7 @@
 #footer {
     background: abstracts.$overlay-blue-darkest;
     background: abstracts.$brand;
+    background: #eee;
     padding: 0 0 5vh 0;
     .footer {
         min-height: 100vh;
@@ -13,354 +14,14 @@
         }
         // SECTION-TITLE
         .footer-section-title {
-                color: #ffff;
+                color: #fff000;
                 text-transform: capitalize;
                 margin-bottom: 10vh;
                 font-size: 2rem;
                 font-size: clamp(2rem, 4vw, 2.25rem);
         }
 
-        // FOOTER SOCIAL MEDIA LINKS
-        .footer-top {
-
-            // SOCIAL MEDIA LINKS
-            .socialMedia-links {
-                @include abstracts.xlg {
-                    width: 100%;
-                    border-radius: abstracts.$border-radius-sm;
-                }
-
-                grid-template-columns: 1fr;
-                background-color: abstracts.$overlay-blue-dark;
-                width: 100%;
-                padding: 10vh 5vw;
-
-                .links-grid {
-                    display: grid;
-                    gap: 5vh;
-
-                    @include abstracts.lg {
-                        width: 100%;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 1rem;
-                    }
-                }
-
-                .socialMedia-item {
-                    position: relative;
-                    transition: .3s;
-                    width: 100%;
-                    border-bottom: 1px solid #fff4;
-                    padding-bottom: 1rem;
-                    overflow: hidden;
-                    position: relative;
-                    @include abstracts.xlg {
-                        width: 85%;
-                        border: 1px solid #fff4;
-                        padding: 0.5rem;
-                        border-radius: abstracts.$border-radius-sm;
-                        &:hover {
-                            border-color: transparent;
-                            background: abstracts.$overlay-blue-darkest;
-                        }
-                    }
-
-                    .item-title {
-                        // border: 1px solid blue;
-
-                        .icon {
-                            position: absolute;
-                            opacity: 0.3;
-                            width: 4rem;
-                            right: 1rem;
-                            top: 50%;
-                            transform: translateY(-50%);
-                        }
-                    }
-
-                    .bg-i {
-                    // border: 1px solid red;
-
-                        position: absolute;
-                        right: 1rem;
-                        top: 1rem;
-                        font-size: 4rem;
-                        color: abstracts.$brand;
-                        opacity: .1;
-                        transition: .25s;
-
-                    }
-
-                    p, h3 {
-                        // font-family: abstracts.$font-title;
-                        font-size: 1.25rem;
-                        font-size: clamp(1.125rem, 2.5vw, 1.25rem);
-                        margin-bottom: .5rem;
-                        text-transform: capitalize;
-                        color: abstracts.$text-light;
-                        font-weight: 400;
-                    }
-
-                    a {
-                        background: abstracts.$overlay-blue-dark;
-                        padding: .7rem;
-                        width: 13rem;
-                        color: abstracts.$text-light;
-                        text-transform: capitalize;
-                        border-radius: .5rem;
-                        position: relative;
-                        isolation: isolate;
-                        transition: .25s ease;
-                        display: flex;
-                        align-items: center;
-                        gap: 0.5rem;
-                        @include abstracts.xsm {
-                            cursor: default;
-                        }
-                        @media (min-width: 768px) {
-                            width: 14rem;
-                            padding: 1rem;
-                        }
-                        i {
-                            color: #fff;
-                            opacity: .3;
-                            // margin-right: 1.5em;
-                            padding-right: .5rem;
-                            transition: .5s;
-                            font-size: 1.5rem;
-
-                            @media (min-width: 768px) {
-                                font-size: 1.5rem;
-                            }
-                        }
-
-                        .icon {
-                            opacity: 0.3;
-                        }
-
-                        // LINK PSEUDO SHADOW AND BG
-                        &:before,
-                        &::after {
-                            position: absolute;
-                            content: '';
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            border-radius: .5rem;
-                            transition: .25s;
-                            z-index: -1;
-                        }
-
-                        &::before {
-                            box-shadow: abstracts.$box-light-top-sm;
-                        }
-
-                        &::after {
-                            opacity: 0;
-                            box-shadow: abstracts.$box-light-top-sm-hover;
-                        }
-
-                        // end of link box shadow
-
-
-
-                        // LINK HOVER AND ACTIVE STATES
-                        @media (max-width: 768px) {
-                            letter-spacing: normal;
-
-                            &:active {
-                                transform: scale(.97);
-
-                                &:before {
-                                    opacity: 0;
-                                }
-
-                                &::after {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-
-                        @media (min-width: 768px) {
-                            letter-spacing: normal;
-
-                            &:hover {
-                                transform: scale(.97);
-
-                                &:before {
-                                    opacity: 0;
-                                }
-
-                                &::after {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                    }
-
-                    // LINK BRAND COLORS
-                    &.codepen {
-                        a {
-                            color: #f4f4f4;
-
-                            &::before {
-                                background-image: linear-gradient(0deg, #000, #333);
-                            }
-
-                            &::after {
-                                background-image: linear-gradient(0deg, #333, #000);
-                            }
-
-                        }
-                    }
-
-                    &.linkedin {
-                        a {
-                            background-color: hsl(201, 100%, 35%);
-
-                            &::before {
-                                background: linear-gradient(hsl(201, 100%, 35%), hsl(201, 100%, 20%));
-                            }
-
-                            &::after {
-                                background: linear-gradient(hsl(201, 100%, 20%), hsl(201, 100%, 35%));
-                            }
-                        }
-                    }
-
-                    &.twitter {
-                        a {
-                            background: hsl(203, 89%, 53%);
-
-                            &::before {
-                                background: linear-gradient(hsl(203, 89%, 53%), hsl(203, 89%, 33%));
-                            }
-
-                            &::after {
-                                background: linear-gradient(hsl(203, 89%, 33%), hsl(203, 89%, 53%));
-                            }
-                        }
-                    }
-
-                    &.github {
-                        a {
-                            background-color: #333;
-                            color: #f4f4f4;
-
-                            &::before {
-                                background: linear-gradient(#555, #333);
-                            }
-
-                            &::after {
-                                background: linear-gradient(#333, #555);
-                            }
-                        }
-                    }
-
-                    &.fcc {
-                        a {
-                            background-color: #0a0a23;
-
-                            &::before {
-                                background: linear-gradient(hsl(240, 56%, 20%), #0a0a23);
-                            }
-
-                            &::after {
-                                background: linear-gradient(#0a0a23, hsl(240, 56%, 20%));
-                            }
-                        }
-                    }
-
-                    &.fem {
-                        a {
-                            background: linear-gradient(hsl(0, 0%, 96%), hsl(0, 0%, 80%));
-                            color: #111;
-
-                            i {
-                                color: #000;
-                            }
-
-                            &::before {
-                                background: linear-gradient(hsl(0, 0%, 96%), hsl(0, 0%, 80%));
-                            }
-
-                            &::after {
-                                background: linear-gradient(hsl(0, 0%, 80%), hsl(0, 0%, 96%));
-                            }
-                        }
-
-                    }
-                    // ITEM HOVER STATE
-                    &:hover {
-                        p {
-                            color: abstracts.$text-light;
-                            transition: .5s;
-                            transition-delay: .05s;
-                        }
-
-                        .bg-i {
-                            opacity: .8;
-                            transition: .5s;
-                        }
-
-                        .item-title {
-                            .title-icon {
-                                opacity: 0.8;
-                            }
-
-                        }
-
-                        a {
-                            i {
-                                opacity: 1;
-                                transform: scale(1.1);
-                            }
-                            .icon {
-                                opacity: 1;
-                            }
-                        }
-                    }
-
-                    &.io-item {
-                        .bg-i {
-                            transform: translateY(5vh);
-                            opacity: 0;
-                        }
-                        .title-icon {
-                            transform: translateY(5vh);
-                            opacity: 0;
-                            transition: 1s;
-                        }
-                    }
-
-                    &.active-item {
-                        .bg-i {
-                            transform: translateY(0);
-                            transition-timing-function: ease;
-                            opacity: .2;
-                            transition: 1s;
-                        }
-
-                        .title-icon {
-                            transform: translateY(-50%);
-                            opacity: 0.4;
-                        }
-
-                        &:hover {
-                            .bg-i {
-                                opacity: .8;
-                                transform: scale(.85);
-                                transition-timing-function: ease-in;
-                                transition: .5s;
-                            }
-
-                            
-                        }
-                    }
-                }
-            }
-        }
+        
         
         // WEBSITE FOOTER
         .footer-bottom {
@@ -369,6 +30,7 @@
             display: flex;
             flex-direction: column;
             gap: 5vh;
+            color: darkgreen;
             @include abstracts.xlg {
                 flex-direction: row;
                 justify-content: space-between;
@@ -402,7 +64,8 @@
                 }
 
                 p {
-                    color: abstracts.$text-light;
+                    // color: abstracts.$text-light;
+                    color: green;
                     text-transform: capitalize;
                     line-height: 1.6;
                 }
@@ -421,6 +84,7 @@
                         }
                         a {
                             color: abstracts.$text-light;
+                            color: green;
                             transition: .25s;
                         }
 
