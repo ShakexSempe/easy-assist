@@ -3,6 +3,7 @@
 .banner {
     width: 100%;
     height: 95vh;
+    min-height: 95vh;
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -11,14 +12,14 @@
 
     h1 {
         font-size: 1rem;
-        font-size: abstracts.$font-clamp-xsm;
+        font-size: abstracts.$font-clamp-sm;
         font-weight: 300;
         margin-bottom: .5rem;
     }
 
     h2 {
         font-size: 2rem;
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-size: clamp(1.25rem, 5vw, 2.25rem);
         letter-spacing: -0.05rem;
     }
 
@@ -48,10 +49,10 @@
 .hero-grid {
     height: 100%;
     width: 100%;
-    padding: 15vh 5vw 5vh;
+    padding: 12vh 5vw 5vh;
 
     display: grid;
-    grid-template-rows: auto 50% auto;
+    grid-template-rows: auto 35% auto;
     row-gap: 0.5rem;
     grid-template-areas: 'grid-title' 'grid-image' 'grid-subtitle';
 
@@ -81,7 +82,7 @@
 
         font-weight: 400;
         font-size: 1rem;
-        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
         
         cursor: default;
         transition: 250ms;
@@ -90,7 +91,7 @@
     h2 {
         line-height: 1.2;
         font-size: 1.8rem;
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         font-weight: 700;
     }
 
@@ -113,8 +114,8 @@
     // z-index: -1;
     // border: 2px solid red;
 
-    // -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 70%, transparent);
-    //     mask: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 70%, transparent);
+        mask: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
 
     // // WIDE SCREEN MASK = 90DEG
     // @include abstracts.lg {
@@ -128,18 +129,20 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: right;
         z-index: 10;
-        opacity: 0.75;
+        opacity: 0.85;
     }
 }
 
 // HERO CTA & SUBTITLE
 .grid-subtitle {
     grid-area: grid-subtitle;
+    padding-top: 1rem;
 
     p {
         font-size: 1rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     
     .btn {
