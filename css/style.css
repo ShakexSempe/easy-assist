@@ -452,6 +452,9 @@ form {
     border-radius: 0.25rem;
   }
 }
+form h2 {
+  color: #f4f4f4;
+}
 form .input-div {
   position: relative;
   padding: 1rem 0 0;

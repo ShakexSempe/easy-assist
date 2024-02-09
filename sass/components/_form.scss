@@ -15,6 +15,10 @@ form {
     // margin: 5vh auto 5vh;
     padding: 5vh 5vw;
 
+    h2 {
+        color: abstracts.$text-light;
+    }
+
     .input-div {
         position: relative;
         padding: 1rem 0 0;
