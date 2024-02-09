@@ -48,52 +48,26 @@ section {
 }
 section .section-title {
   font-size: 2rem;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: #003300;
   margin-bottom: 10vh;
   text-transform: uppercase;
-  -webkit-box-reflect: below -0.9rem linear-gradient(transparent, #0003);
+  position: relative;
+  line-height: 1.4;
+}
+section .section-title:after {
+  content: attr(data-after);
+  transition: 250ms;
 }
 section .section-title span {
-  position: relative;
-  animation: section-span 3s ease-in-out infinite;
-  height: 5px;
-  color: #dc143c;
-  /* section title animations */
-  /* end of section title animations */
+  color: green;
 }
-@keyframes section-span {
-  0%, 100% {
-    top: 0px;
-    opacity: 1;
-  }
-  45% {
-    top: -20px;
-    opacity: 0;
-    color: #29323d;
-  }
-  46% {
-    top: 20px;
-    opacity: 0;
-    color: #dc143c;
-    color: #29323d;
-  }
-  65% {
-    color: #29323d;
-  }
+section .section-title.io-item::after {
+  letter-spacing: 0.125rem;
 }
-section .section-title.io-item {
-  opacity: 1;
-  transition: 1s;
-}
-section .section-title.io-item span {
-  animation: none;
-}
-section .section-title.active-item {
-  opacity: 1;
-}
-section .section-title.active-item span {
-  animation: section-span 3s ease-in-out infinite 0.25s;
+section .section-title.active-item::after {
+  letter-spacing: normal;
+  transition: 1000ms ease;
 }
 
 .intro {
@@ -1360,7 +1334,7 @@ form button:hover::after {
   opacity: 1;
   background: green;
   background: #fafafa;
-  box-shadow: 0.015rem 0.015rem 0.5rem rgba(41, 50, 60, 0.08), 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0rem 0.5rem 0.5rem rgba(41, 50, 60, 0.025);
 }
 .header-io #nav .logo {
   opacity: 1;
@@ -1383,8 +1357,9 @@ form button:hover::after {
 .banner h1 {
   font-size: 1rem;
   font-size: clamp(1rem, 2vw, 1.125rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 0.5rem;
+  color: green;
 }
 .banner h2 {
   font-size: 2rem;

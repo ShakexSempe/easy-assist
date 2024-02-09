@@ -13,8 +13,9 @@
     h1 {
         font-size: 1rem;
         font-size: abstracts.$font-clamp-sm;
-        font-weight: 300;
+        font-weight: 400;
         margin-bottom: .5rem;
+        color: abstracts.$brand;
     }
 
     h2 {
@@ -116,6 +117,7 @@
 
     -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 70%, transparent);
         mask: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
+
 
     // // WIDE SCREEN MASK = 90DEG
     // @include abstracts.lg {
