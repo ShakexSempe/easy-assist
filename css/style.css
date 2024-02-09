@@ -25,6 +25,7 @@ body a {
   transition: 350ms;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #003300;
   text-transform: capitalize;
   text-wrap: balance;
 }
@@ -768,6 +769,36 @@ form button:hover::after {
 .cta .cta-item:hover .icon {
   transform: translateX(0.25rem);
   opacity: 0.85;
+}
+
+.services {
+  padding: 5vh 5vw;
+  min-height: 90vh;
+  background: #fafafa;
+}
+.services .services-container {
+  margin-bottom: 1rem;
+  display: grid;
+  row-gap: 5vh;
+}
+@media (min-width: 768px) {
+  .services .services-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 820px) {
+  .services .services-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.services .services-container h3 {
+  margin-bottom: 0.5rem;
+}
+.services .services-container ul {
+  list-style: none;
+}
+.services .services-container ul li {
+  color: green;
 }
 
 #contact {

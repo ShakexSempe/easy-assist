@@ -56,3 +56,36 @@
         }
     }
 }
+
+
+.services {
+    padding: 5vh 5vw;
+    min-height: 90vh;
+    background: #fafafa;
+    // background: linear-gradient(0deg, #ffff 80%, #f4f4f4 60%);
+
+
+    .services-container {
+        margin-bottom: 1rem;
+        display: grid;
+        row-gap: 5vh;
+
+        @include abstracts.md {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include abstracts.lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+            li {
+                color: abstracts.$brand;
+            }
+        }
+    }
+}
