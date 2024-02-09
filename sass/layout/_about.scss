@@ -17,3 +17,42 @@
         }
     }
 }
+
+
+.cta {
+    // border: 3px solid red;
+    background: linear-gradient(40deg, red 20%, blue 50%);
+    background: linear-gradient(40deg, #fafafa 20%, hsl(0, 0%, 94%) 50%);
+
+    padding: 5vh 5vw;
+    min-height: 40vh;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .cta-grid {
+        margin-top: 5vh;
+        display: grid;
+        row-gap: 1rem;
+    }
+
+    .cta-item {
+        display: flex;
+        gap: 0.5rem;
+
+        
+
+        &:hover {
+
+            a {
+                text-decoration-color: abstracts.$brand;
+            }
+
+            .icon {
+                transform: translateX(0.25rem);
+                opacity: 0.85;
+            }
+        }
+    }
+}
