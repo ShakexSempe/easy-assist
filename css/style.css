@@ -51,7 +51,7 @@ section {
 section .section-title {
   font-size: 2rem;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   margin-bottom: 5vh;
   text-transform: uppercase;
   position: relative;
@@ -62,7 +62,7 @@ section .section-title span {
   display: block;
   font-weight: 500;
   font-size: 1.25rem;
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 section .section-title.io-item::after {
   letter-spacing: 0.125rem;
@@ -420,7 +420,7 @@ dialog h3 {
 }
 dialog h4 {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   text-wrap: pretty;
   text-wrap: balance;
   text-transform: capitalize;
@@ -803,7 +803,7 @@ form button:hover::after {
   margin-bottom: 1rem;
   color: green;
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
 }
 .services .services-container .service-item ul {
   list-style: none;
@@ -884,13 +884,13 @@ form button:hover::after {
 .contact .contact-item .title {
   text-transform: capitalize;
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   transition: 0.25s;
   position: relative;
 }
 .contact .contact-item .title h3 {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
 }
 .contact .contact-item .title i, .contact .contact-item .title img {
   transform: translateY(-1rem) scale(1.1);
@@ -1428,7 +1428,7 @@ form button:hover::after {
 }
 .banner h1 {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: green;
@@ -1440,7 +1440,7 @@ form button:hover::after {
 }
 .banner p {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
 }
 
 .hero-grid {
@@ -1477,7 +1477,7 @@ form button:hover::after {
   font-weight: 500;
   font-size: 1rem;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   cursor: default;
   transition: 250ms;
 }
