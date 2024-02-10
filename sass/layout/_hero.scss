@@ -98,6 +98,8 @@
         font-weight: 700;
     }
 
+    
+
     // WIDE SCREEN LAYOUT
     @include abstracts.lg {
         place-self: center left;
@@ -122,12 +124,12 @@
 
 
     // // WIDE SCREEN MASK = 90DEG
-    // @include abstracts.lg {
+    @include abstracts.lg {
 
-    //     -webkit-mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
-    //     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        -webkit-mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     
-    // }
+    }
 
     img {
         width: 100%;
@@ -147,6 +149,7 @@
     p {
         font-size: 1rem;
         margin-bottom: 1rem;
+        max-width: 450px;
     }
     
     .btn {

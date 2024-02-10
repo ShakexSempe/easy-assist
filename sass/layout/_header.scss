@@ -12,6 +12,10 @@
     transition: .25s;
     z-index: 10;
 
+    @include abstracts.md {
+        height: 8vh;
+    }
+
     // PSEUDO BACKGROUND COLOR
     // BG = TRANSPARENT WHEN HERO = INTERSECTING
     // BG = DARKEST WHEN SIDEBAR = ACTIVE
@@ -27,6 +31,7 @@
         z-index: -1;
         transition: background-color .15s, box-shadow 1s;
     }
+
 }
 
 // NAV = LOGO + NAV-LIST
@@ -141,7 +146,7 @@
                             display: flex;
                             align-items: center;
                             gap: 0.5rem;
-                            color: abstracts.$brand;
+                            color: abstracts.$aside-nav-links;
 
                             width: 100%;
                             padding-bottom: 0.5rem;
@@ -170,7 +175,7 @@
                             &.active {
                                 color: abstracts.$brand;
                                 color: abstracts.$text-light;
-                                border-bottom: 1px solid abstracts.$overlay-blue-light;
+                                border-bottom: 1px solid abstracts.$text-light;
                                 .icon {
                                     opacity: 1;
                                 }
@@ -239,6 +244,7 @@
                         display: flex;
                         align-items: center;
                         gap: 0.5rem;
+                        color: abstracts.$aside-contact-links;
 
                         span {
                             height: 1rem;
@@ -388,7 +394,6 @@
                         width: 0%;
                         height: 2px;
                         background-color: abstracts.$brand;
-                        background-color: #fff;
                         transition: 250ms ease;
                     }
 
@@ -400,7 +405,6 @@
                         display: block;
                         letter-spacing: normal;
                         float: left;
-                        color: abstracts.$text-light;
                         transition: 250ms;
 
                         // TURN OFF DISPLAY OF DATA-AFTER TEXT ON BIGGER SCREENS THATS VISIBLE IN SIDEBAR LINK HOVER
@@ -427,10 +431,7 @@
 
                     // UNDERLINE TRANSITION OUT IN LI HOVER
                     &:hover {
-                        a {
-                            transition: 250ms ease;
-                            color: abstracts.$text-light;
-                        }
+                        color: abstracts.$brand;
 
                         &::before {
                             width: 50%;
@@ -467,7 +468,7 @@
 .hero-header {
     &::after {
         background: transparent;
-        background: #fffa;
+        background: #fff;
         box-shadow: 0rem 1rem 1rem transparent;
         transition: 0;
     }
@@ -476,14 +477,6 @@
     #nav {
         .logo {
             transform: translateY(-10vh);
-        }
-
-        ul {
-            li {
-                a {
-                    color: #000;
-                }
-            }
         }
     }
 }
@@ -502,15 +495,6 @@
             opacity: 1;
             transform: translateY(0);
             transition: 1s;
-        }
-
-        .nav-list {
-            ul {
-                li {
-                    // opacity: 1;
-                }
-            }
-
         }
 
 

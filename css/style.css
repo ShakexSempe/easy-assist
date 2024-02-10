@@ -50,8 +50,8 @@ section {
 }
 section .section-title {
   font-size: 2rem;
-  font-size: clamp(1.25rem, 3vw, 2rem);
   font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.25rem, 3vw, 2rem);
   margin-bottom: 5vh;
   text-transform: uppercase;
   position: relative;
@@ -1063,6 +1063,11 @@ form button:hover::after {
   transition: 0.25s;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .header {
+    height: 8vh;
+  }
+}
 .header::after {
   content: "";
   position: absolute;
@@ -1114,7 +1119,7 @@ form button:hover::after {
 }
 #nav .nav-list ul li a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #000;
   text-transform: capitalize;
   display: block;
   font-weight: 400;
@@ -1129,7 +1134,7 @@ form button:hover::after {
     height: 100vh;
     background-color: #0a0d0f;
     background-color: #003300;
-    color: #f2f2f2;
+    color: #000;
     transition: 0.5s ease;
     z-index: 5;
   }
@@ -1162,7 +1167,7 @@ form button:hover::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: green;
+    color: #999999;
     width: 100%;
     padding-bottom: 0.5rem;
     font-size: 1rem;
@@ -1186,7 +1191,7 @@ form button:hover::after {
   #nav .nav-list .links-container ul li a.active {
     color: green;
     color: #f4f4f4;
-    border-bottom: 1px solid #475462;
+    border-bottom: 1px solid #f4f4f4;
   }
   #nav .nav-list .links-container ul li a.active .icon {
     opacity: 1;
@@ -1236,6 +1241,7 @@ form button:hover::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: #999999;
   }
   #nav .nav-list .links-container .contact-links a span {
     height: 1rem;
@@ -1334,7 +1340,6 @@ form button:hover::after {
     width: 0%;
     height: 2px;
     background-color: green;
-    background-color: #fff;
     transition: 250ms ease;
   }
   #nav .nav-list ul li a {
@@ -1345,7 +1350,6 @@ form button:hover::after {
     display: block;
     letter-spacing: normal;
     float: left;
-    color: #f4f4f4;
     transition: 250ms;
   }
   #nav .nav-list ul li a::after {
@@ -1358,9 +1362,8 @@ form button:hover::after {
   #nav .nav-list ul li i, #nav .nav-list ul li .icon {
     display: none;
   }
-  #nav .nav-list ul li:hover a {
-    transition: 250ms ease;
-    color: #f4f4f4;
+  #nav .nav-list ul li:hover {
+    color: green;
   }
   #nav .nav-list ul li:hover::before {
     width: 50%;
@@ -1380,15 +1383,12 @@ form button:hover::after {
 
 .hero-header::after {
   background: transparent;
-  background: #fffa;
+  background: #fff;
   box-shadow: 0rem 1rem 1rem transparent;
   transition: 0;
 }
 .hero-header #nav .logo {
   transform: translateY(-10vh);
-}
-.hero-header #nav ul li a {
-  color: #000;
 }
 
 .header-io::after {
@@ -1488,6 +1488,12 @@ form button:hover::after {
   -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 70%, transparent);
   mask: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
 }
+@media (min-width: 820px) {
+  .grid-image {
+    -webkit-mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+}
 .grid-image img {
   width: 100%;
   height: 100%;
@@ -1504,6 +1510,7 @@ form button:hover::after {
 .grid-subtitle p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  max-width: 450px;
 }
 .grid-subtitle .btn {
   margin: 1rem 0 0;
