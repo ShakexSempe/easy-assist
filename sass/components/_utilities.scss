@@ -26,23 +26,24 @@
     width: 100%;
     height: 3px;
     background: transparent;
+    // background: red;
 }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-    height: 3px;
-    background: abstracts.$overlay-blue-dark;
+    height: 2px;
     background: linear-gradient(90deg, abstracts.$overlay-blue-dark, abstracts.$overlay-blue-light, abstracts.$overlay-blue-dark);
-    // background: red; 
+    background: red; 
+    background: abstracts.$brand;
     opacity: .1;
     width: 0%;
     transition: .5s;
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
 
-    &.index-bar {
-        background: transparent;
-    }
+    // &.index-bar {
+    //     background: transparent;
+    // }
     &.active-bar {  
         opacity: .5;
         // opacity: 1;
