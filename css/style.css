@@ -25,13 +25,12 @@ body a {
   transition: 350ms;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #003300;
   text-transform: capitalize;
   text-wrap: balance;
 }
 body p {
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1rem, 1.5vw, 1.05rem);
   font-weight: 400;
   line-height: 1.6;
   text-wrap: pretty;
@@ -51,19 +50,19 @@ section {
 }
 section .section-title {
   font-size: 2rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: #003300;
-  margin-bottom: 10vh;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 5vh;
   text-transform: uppercase;
   position: relative;
   line-height: 1.4;
 }
-section .section-title:after {
-  content: attr(data-after);
-  transition: 250ms;
-}
 section .section-title span {
   color: green;
+  display: block;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
 }
 section .section-title.io-item::after {
   letter-spacing: 0.125rem;
@@ -330,7 +329,7 @@ section .section-title.active-item::after {
 }
 .btn.btn-light {
   color: #29323d;
-  background: #f4f4f4;
+  background: #fff;
 }
 .btn.btn-light::before {
   background: linear-gradient(0deg, #ddd, #f4f4f4);
@@ -421,7 +420,7 @@ dialog h3 {
 }
 dialog h4 {
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   text-wrap: pretty;
   text-wrap: balance;
   text-transform: capitalize;
@@ -748,28 +747,28 @@ form button:hover::after {
   content: ".";
 }
 
-.cta {
+.section-cta {
   background: linear-gradient(40deg, red 20%, blue 50%);
   background: linear-gradient(40deg, #fafafa 20%, #f0f0f0 50%);
   padding: 5vh 5vw;
   min-height: 40vh;
 }
-.cta h2 {
+.section-cta h2 {
   font-size: 2rem;
 }
-.cta .cta-grid {
+.section-cta .cta-grid {
   margin-top: 5vh;
   display: grid;
   row-gap: 1rem;
 }
-.cta .cta-item {
+.section-cta .cta-item {
   display: flex;
   gap: 0.5rem;
 }
-.cta .cta-item:hover a {
+.section-cta .cta-item:hover a {
   text-decoration-color: green;
 }
-.cta .cta-item:hover .icon {
+.section-cta .cta-item:hover .icon {
   transform: translateX(0.25rem);
   opacity: 0.85;
 }
@@ -874,13 +873,13 @@ form button:hover::after {
 .contact .contact-item .title {
   text-transform: capitalize;
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   transition: 0.25s;
   position: relative;
 }
 .contact .contact-item .title h3 {
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
 }
 .contact .contact-item .title i, .contact .contact-item .title img {
   transform: translateY(-1rem) scale(1.1);
@@ -1418,7 +1417,7 @@ form button:hover::after {
 }
 .banner h1 {
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: green;
@@ -1430,10 +1429,7 @@ form button:hover::after {
 }
 .banner p {
   font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-}
-.banner span {
-  color: green;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
 }
 
 .hero-grid {
@@ -1467,9 +1463,10 @@ form button:hover::after {
 }
 .grid-title h1 {
   margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   cursor: default;
   transition: 250ms;
 }
@@ -1477,6 +1474,7 @@ form button:hover::after {
   line-height: 1.2;
   font-size: 1.8rem;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 700;
 }
 @media (min-width: 820px) {
@@ -1508,6 +1506,7 @@ form button:hover::after {
   margin-bottom: 1rem;
 }
 .grid-subtitle .btn {
+  margin: 1rem 0 0;
   width: 10.5rem;
   width: clamp(10.5rem, 25vw, 12rem);
 }
