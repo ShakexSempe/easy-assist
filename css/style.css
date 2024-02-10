@@ -74,7 +74,7 @@ section .section-title.active-item::after {
 
 .intro {
   background: linear-gradient(130deg, #fafafa 50%, #f0f0f0 70%);
-  padding: 5vh 5vw;
+  padding: 10vh 5vw;
   min-height: 50vh;
 }
 .intro p {
