@@ -812,6 +812,8 @@ form button:hover::after {
 }
 .services .services-container .service-item ul li {
   margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.05rem);
 }
 
 #contact {
