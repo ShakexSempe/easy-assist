@@ -1393,7 +1393,7 @@ form button:hover::after {
 
 .hero-header::after {
   background: transparent;
-  background: #fffa;
+  background: #fff5;
   box-shadow: 0rem 1rem 1rem transparent;
   transition: 0;
 }
