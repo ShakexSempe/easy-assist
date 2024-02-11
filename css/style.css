@@ -63,10 +63,10 @@ section .section-title span {
   font-size: 1.25rem;
   font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
-section .section-title.io-item::after {
-  letter-spacing: 0.125rem;
+section .section-title.io-item span {
+  letter-spacing: 0.25rem;
 }
-section .section-title.active-item::after {
+section .section-title.active-item span {
   letter-spacing: normal;
   transition: 1000ms ease;
 }

@@ -76,13 +76,13 @@ section {
         }
 
         &.io-item {
-            &::after {
-                letter-spacing: 0.125rem;
+            span {
+                letter-spacing: 0.25rem;
             }
         }
 
         &.active-item {
-            &::after {
+            span {
                 letter-spacing: normal;
                 transition: 1000ms ease;
             }
