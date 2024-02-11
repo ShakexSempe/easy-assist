@@ -100,14 +100,20 @@ section .section-title.active-item::after {
 .intro p span {
   color: darkgreen;
 }
-.intro img {
-  border: 3px solid blue;
+.intro .intro-cta-container {
+  padding: 1rem 0 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.intro .intro-img {
   position: absolute;
   right: 0;
   width: 70%;
+  z-index: -1;
+  mix-blend-mode: darken;
 }
 @media (min-width: 768px) {
-  .intro img {
+  .intro .intro-img {
     display: none;
   }
 }
