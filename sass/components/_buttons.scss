@@ -101,42 +101,6 @@
         }
     }
 
-    &.btn-secondary {
-        color: abstracts.$overlay-blue-dark;
-        &::before {
-            background: #ffff;
-            box-shadow: none;
-            border: 1px solid abstracts.$overlay-blue-dark;
-        }
-        &::after {
-            background: #fafafa;
-            box-shadow: none;
-            border: none;
-        }
-    }
-    &.btn-dark {
-        color: abstracts.$text-light;
-        &::before {
-            background: abstracts.$overlay-btn;
-        }
-        &::after {
-            background: abstracts.$overlay-btn-hover;
-        }
-    }
-    &.btn-light {
-        color: abstracts.$overlay-blue-dark;
-        background: abstracts.$background-light;
-        &::before {
-            background: abstracts.$button-light;
-            box-shadow: none;
-            border: 1px solid abstracts.$overlay-blue-dark;
-        }
-        &::after {
-            background: abstracts.$button-light-hover;
-            box-shadow: none;
-            border: none;
-        }
-    }
     
 
     // HOVER AND ACTIVE CLASS MEDIA QUERY

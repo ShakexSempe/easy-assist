@@ -1,0 +1,118 @@
+@use '../abstracts';
+
+.section-cta {
+    // border: 3px solid red;
+    // background: #f0f0f0;
+    // background: linear-gradient(130deg, #fafafa 50%, hsl(0, 0%, 94%) 70%);
+    background-color: abstracts.$main-background-light;
+    padding: 10vh 5vw;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    @include abstracts.md {
+        padding: 15vh 5vw;
+        background-attachment: fixed;
+        background-color: #fafafa;
+        background-repeat: no-repeat;
+
+        &.intro-cta {
+            background-image: url('/img/hero.jpg');
+            background-size: cover;
+            background-size: 40%;
+            background-position: 100% top;
+        }
+    
+        &.contact-cta {
+            background-image: url('/img/hero-2.jpg');
+            background-size: cover;
+            background-size: 50%;
+            background-position: 100% 50%;
+        }
+
+    }
+    
+
+    .cta-section-title {
+        font-size: 2rem;
+        font-size: abstracts.$font-clamp-xlg;
+        line-height: 1.2;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        span {
+            color: darkgreen;
+        }
+    }
+
+    .cta-flex-container {
+        // padding: 1rem 0 0.5rem;
+        display: flex;
+        gap: 1rem;
+        padding: 0 0.125rem;
+    }
+
+    .cta-grid {
+        margin: 1rem 0;
+
+        .section-cta-item {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom:1rem;
+
+            &:hover {
+
+                a {
+                    text-decoration-color: abstracts.$brand;
+                }
+    
+                .icon {
+                    transform: translateX(0.25rem);
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+
+    .section-cta-image {
+        @include abstracts.md {
+            display: none;
+        }
+        position: absolute;
+        right: 0;
+        // top: 0;
+        width: 70%;
+        z-index: -1;
+        // opacity: .85;
+        mix-blend-mode: darken;
+    }
+
+}
+
+.section-cta-1 {
+    // border: 3px solid red;
+    background: linear-gradient(40deg, #fafafa 20%, hsl(0, 0%, 94%) 50%);
+    background: abstracts.$main-background;
+    padding: 5vh 5vw;
+    height: 90vh;
+
+    h2 {
+        font-size: 2rem;
+        color: abstracts.$brand;
+    }
+
+    .cta-grid {
+        margin-top: 5vh;
+        display: grid;
+        row-gap: 1rem;
+    }
+
+    .cta-item {
+        display: flex;
+        gap: 0.5rem;
+
+        
+
+        
+    }
+}
