@@ -427,8 +427,7 @@ form .input-div input, form .input-div textarea {
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  background: #1f252d;
-  outline: 1px solid green;
+  background: #e6e6e6;
   color: #f4f4f4;
 }
 @media (min-width: 576px) {

@@ -41,8 +41,7 @@ form {
             border: none;
             font-size: 1rem;
             font-weight: 500;
-            background: abstracts.$overlay-blue-darker;
-            outline: 1px solid abstracts.$brand;
+            background: abstracts.$main-background-dark;
             color: abstracts.$text-light;
             // WIDE SCREENS INPUT = SMALLER PADDING
             @include abstracts.sm {
@@ -64,6 +63,7 @@ form {
             }
 
             &:focus, &:hover {
+                // outline-color: red;
                 &::placeholder {
                     opacity: .6;
                 }
