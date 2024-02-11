@@ -1,9 +1,15 @@
 
 // BRAND BACKGROUND COLORS
 $main-background: #fafafa;
+$main-background-dark: #0000;
 $main-background-light: #f4f4f4;
 $main-background-dark: hsl(0, 0%, 90%);
 
+// @media (prefers-color-scheme: dark){
+//     $main-background: #222;
+//     $main-background-light: #333;
+//     $main-background-dark: #111;
+// }
 
 // BACKGROUND COLORS
 $background-gray: #f4f4f4;

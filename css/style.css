@@ -12,7 +12,6 @@ html {
 
 body {
   max-width: 100%;
-  background-color: #fff000;
   background-color: #fafafa;
 }
 body img {
@@ -40,6 +39,12 @@ body .icon {
   width: 1.025rem;
   height: auto;
   transition: 0.25s;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #fafafa;
+  }
 }
 
 main {
@@ -685,8 +690,13 @@ form button:hover::after {
 .about {
   min-height: 70vh;
   padding: 10vh 5vw;
-  background: #f0f0f0;
-  background: #fafafa;
+  background-color: #f0f0f0;
+  background-color: #fafafa;
+}
+@media (prefers-color-scheme: dark) {
+  .about {
+    background-color: #333;
+  }
 }
 .about article p {
   margin-bottom: 1rem;
@@ -854,9 +864,9 @@ form button:hover::after {
   padding: 0 0 5vh 0;
 }
 #footer .footer {
+  color: #eee;
   min-height: 100vh;
   width: 100%;
-  color: #eee;
 }
 @media (min-width: 1024px) {
   #footer .footer {
@@ -876,6 +886,11 @@ form button:hover::after {
   flex-direction: column;
   gap: 5vh;
   color: #000;
+}
+@media (prefers-color-scheme: dark) {
+  #footer .footer .footer-bottom {
+    color: #fafafa;
+  }
 }
 @media (min-width: 1024px) {
   #footer .footer .footer-bottom {
@@ -908,6 +923,11 @@ form button:hover::after {
   text-transform: capitalize;
   margin-bottom: 1rem;
   color: darkgreen;
+}
+@media (prefers-color-scheme: dark) {
+  #footer .footer .footer-bottom .footer-item h3 {
+    color: green;
+  }
 }
 #footer .footer .footer-bottom .footer-item p {
   text-transform: capitalize;
@@ -945,6 +965,12 @@ form button:hover::after {
 }
 #footer .footer .footer-bottom .footer-item .footer-list.browse-list {
   text-transform: capitalize;
+}
+@media (prefers-color-scheme: dark) {
+  #footer {
+    background-color: #111;
+    color: #fafafa;
+  }
 }
 
 .header {
@@ -1282,6 +1308,11 @@ form button:hover::after {
   box-shadow: 0rem 1rem 1rem transparent;
   transition: 0;
 }
+@media (prefers-color-scheme: dark) {
+  .hero-header::after {
+    background-color: #0002;
+  }
+}
 .hero-header #nav .logo {
   transform: translateY(-10vh);
 }
@@ -1291,6 +1322,11 @@ form button:hover::after {
   background: green;
   background: #fafafa;
   box-shadow: 0rem 0.5rem 0.5rem rgba(41, 50, 60, 0.025);
+}
+@media (prefers-color-scheme: dark) {
+  .header-io::after {
+    background-color: #222;
+  }
 }
 .header-io #nav .logo {
   opacity: 1;
@@ -1439,6 +1475,12 @@ form button:hover::after {
     background-position: 100% 50%;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .section-cta {
+    background-color: #ababab;
+    color: #fafafa;
+  }
+}
 .section-cta .cta-section-title {
   font-size: 2rem;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -1448,6 +1490,11 @@ form button:hover::after {
 }
 .section-cta .cta-section-title span {
   color: darkgreen;
+}
+@media (prefers-color-scheme: dark) {
+  .section-cta .cta-section-title span {
+    color: #00b300;
+  }
 }
 .section-cta .cta-flex-container {
   display: flex;
@@ -1508,6 +1555,11 @@ form button:hover::after {
   background: #fafafa;
   background: #e6e6e6;
 }
+@media (prefers-color-scheme: dark) {
+  .services {
+    background-color: #222;
+  }
+}
 .services .services-container {
   margin-bottom: 1rem;
   display: grid;
@@ -1546,6 +1598,12 @@ form button:hover::after {
   font-size: 1rem;
   font-size: clamp(1rem, 1.5vw, 1.05rem);
   text-wrap: balance;
+}
+@media (prefers-color-scheme: dark) {
+  .services .services-container .service-item {
+    background-color: #333;
+    color: #fafafa;
+  }
 }
 
 /* LOADER SCREEN */

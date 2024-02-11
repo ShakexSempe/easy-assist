@@ -31,8 +31,14 @@
             background-position: 100% 50%;
         }
 
+        
     }
     
+    // DARK MODE
+    @media (prefers-color-scheme: dark){
+        background-color: hsl(0, 0%, 67%);
+        color: #fafafa;
+    }
 
     .cta-section-title {
         font-size: 2rem;
@@ -42,6 +48,11 @@
         margin-bottom: 1rem;
         span {
             color: darkgreen;
+        }
+        @media (prefers-color-scheme: dark){
+            span {
+                color: hsl(120, 100%, 35%);
+            }
         }
     }
 
@@ -85,6 +96,7 @@
         z-index: -1;
         // opacity: .85;
         mix-blend-mode: darken;
+
     }
 
 }

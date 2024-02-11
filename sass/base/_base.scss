@@ -7,8 +7,8 @@ html {
 
 body {
     max-width: 100%;
-    background-color: #fff000;
     background-color: abstracts.$main-background;
+
     img {
         display: block;
         max-width: 100%;
@@ -40,6 +40,11 @@ body {
         width: 1.025rem;
         height: auto;
         transition: 0.25s;
+    }
+
+    @media (prefers-color-scheme: dark){
+        background-color: #333;
+        color: #fafafa;
     }
 }
 

@@ -7,6 +7,9 @@
     background: abstracts.$main-background-dark;
     // background: linear-gradient(0deg, #ffff 80%, #f4f4f4 60%);
 
+    @media (prefers-color-scheme: dark){
+        background-color: #222;
+    }
 
     .services-container {
         margin-bottom: 1rem;
@@ -46,6 +49,11 @@
                     font-size: abstracts.$font-clamp-xsm;
                     text-wrap: balance;
                 }
+            }
+
+            @media (prefers-color-scheme: dark){
+                background-color: #333;
+                color: #fafafa;
             }
 
         }

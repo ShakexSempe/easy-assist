@@ -3,8 +3,12 @@
 .about {
     min-height: 70vh;
     padding: 10vh 5vw;
-    background: #f0f0f0;
-    background: abstracts.$main-background;
+    background-color: #f0f0f0;
+    background-color: abstracts.$main-background;
+
+    @media (prefers-color-scheme: dark){
+        background-color: #333;
+    }
 
 
 

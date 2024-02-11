@@ -471,6 +471,10 @@
         background: #fff5;
         box-shadow: 0rem 1rem 1rem transparent;
         transition: 0;
+
+        @media (prefers-color-scheme: dark){
+            background-color: #0002;
+        }
     }
 
     // NAVBAR LOGO TRANSITIONS OUT OF VIEW ON HERO SECTION
@@ -488,6 +492,10 @@
         background: abstracts.$brand;
         background: #fafafa;
         box-shadow: 0rem .5rem .5rem rgba(41, 50, 60, .025);
+    
+        @media (prefers-color-scheme: dark){
+            background-color: #222;
+        }
     }
 
     #nav {
