@@ -2,12 +2,10 @@
 
 html {
     scroll-behavior: smooth;
-    // font-family: abstracts.$font-content;
     font-family: 'Content', sans-serif;
 }
 
 body {
-    color: abstracts.$overlay-blue-darker;
     max-width: 100%;
     img {
         display: block;
@@ -34,6 +32,7 @@ body {
         line-height: 1.6;
         text-wrap: pretty;
     }
+    
 
     .icon {
         width: 1.025rem;
@@ -95,12 +94,40 @@ section {
 .intro {
     background: linear-gradient(130deg, #fafafa 50%, hsl(0, 0%, 94%) 70%);
     padding: 10vh 5vw;
-    min-height: 50vh;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    @include abstracts.md {
+        padding: 15vh 5vw;
+        background-color: #fafafa;
+        background-image: url('/img/hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 40%;
+        background-attachment: fixed;
+        background-position: 100% top;
+    }
+
     p {
         font-size: 2rem;
+        font-size: abstracts.$font-clamp-xlg;
+        line-height: 1.4;
         text-transform: capitalize;
         span {
             color: darkgreen;
+        }
+    }
+
+    img {
+        border: 3px solid blue;
+        position: absolute;
+        right: 0;
+        width: 70%;
+
+        @include abstracts.md {
+            display: none;
         }
     }
 

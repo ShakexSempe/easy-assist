@@ -10,14 +10,6 @@
     background-color: #fafafa;
     // border: 2px solid red;
 
-    h1 {
-        font-size: 1rem;
-        font-size: abstracts.$font-clamp-sm;
-        font-weight: 400;
-        margin-bottom: .5rem;
-        color: abstracts.$brand;
-    }
-
     h2 {
         font-size: 2rem;
         font-size: clamp(1.25rem, 5vw, 2.25rem);
@@ -79,6 +71,7 @@
     text-transform: capitalize;
 
     h1 {
+        color: abstracts.$brand;
         margin-bottom: 1rem;
 
         font-weight: 500;
@@ -119,8 +112,8 @@
     // z-index: -1;
     // border: 2px solid red;
 
-    -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 70%, transparent);
-        mask: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 
 
     // // WIDE SCREEN MASK = 90DEG
@@ -138,6 +131,7 @@
         object-position: right;
         z-index: 10;
         opacity: 0.85;
+        mix-blend-mode: darken;
     }
 }
 
