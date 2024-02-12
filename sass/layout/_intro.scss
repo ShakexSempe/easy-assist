@@ -36,7 +36,8 @@
     
     // DARK MODE
     @media (prefers-color-scheme: dark){
-        background-color: hsl(0, 0%, 67%);
+        background-color: hsl(0, 0%, 37%);
+        background-color: #0006;
         color: #fafafa;
     }
 
@@ -52,6 +53,7 @@
         @media (prefers-color-scheme: dark){
             span {
                 color: hsl(120, 100%, 35%);
+                color: abstracts.$brand-light;
             }
         }
     }
@@ -96,6 +98,10 @@
         z-index: -1;
         // opacity: .85;
         mix-blend-mode: darken;
+
+        @media (prefers-color-scheme: dark){
+            mix-blend-mode: difference;
+        }
 
     }
 

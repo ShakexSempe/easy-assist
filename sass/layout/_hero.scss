@@ -80,6 +80,10 @@
         
         cursor: default;
         transition: 250ms;
+
+        @media (prefers-color-scheme: dark){
+            color: abstracts.$brand-light;
+        }
     }
 
     h2 {

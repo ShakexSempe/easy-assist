@@ -33,6 +33,10 @@
                 color: abstracts.$brand-light;
                 text-decoration-color: transparent;
             }
+
+            @media (prefers-color-scheme: dark){
+                color: abstracts.$brand-light;
+            }
         }
 
     }

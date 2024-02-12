@@ -46,6 +46,10 @@
                 font-size: 1rem;
                 font-size: abstracts.$font-clamp-sm;
                 transition: 350ms;
+
+                @media (prefers-color-scheme: dark){
+                    color: abstracts.$brand;
+                }
             }
     
             ul {
@@ -70,6 +74,9 @@
                     color: abstracts.$brand;
                     transition-delay: 350ms;
                     transition: calc(250ms / 2);
+                    @media (prefers-color-scheme: dark){
+                        color: abstracts.$brand-light;
+                    }
                 }
 
                 animation: service-card 350ms ease-in-out;

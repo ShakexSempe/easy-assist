@@ -72,6 +72,11 @@ section .section-title span {
   font-size: 1.25rem;
   font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
+@media (prefers-color-scheme: dark) {
+  section .section-title span {
+    color: #00b300;
+  }
+}
 section .section-title.io-item span {
   letter-spacing: 0.25rem;
 }
@@ -716,6 +721,11 @@ form button:hover::after {
   color: #00b300;
   text-decoration-color: transparent;
 }
+@media (prefers-color-scheme: dark) {
+  .about article a {
+    color: #00b300;
+  }
+}
 
 #contact {
   scroll-margin-top: 5vh;
@@ -925,11 +935,11 @@ form button:hover::after {
 #footer .footer .footer-bottom .footer-item h3 {
   text-transform: capitalize;
   margin-bottom: 1rem;
-  color: darkgreen;
+  color: green;
 }
 @media (prefers-color-scheme: dark) {
   #footer .footer .footer-bottom .footer-item h3 {
-    color: green;
+    color: #00b300;
   }
 }
 #footer .footer .footer-bottom .footer-item p {
@@ -1303,7 +1313,7 @@ form button:hover::after {
 }
 @media (prefers-color-scheme: dark) {
   .hero-header::after {
-    background-color: #0002;
+    background-color: #0001;
   }
 }
 .hero-header #nav .logo {
@@ -1386,6 +1396,11 @@ form button:hover::after {
   font-size: clamp(1.025rem, 2vw, 1.125rem);
   cursor: default;
   transition: 250ms;
+}
+@media (prefers-color-scheme: dark) {
+  .grid-title h1 {
+    color: #00b300;
+  }
 }
 .grid-title h2 {
   line-height: 1.2;
@@ -1470,7 +1485,8 @@ form button:hover::after {
 }
 @media (prefers-color-scheme: dark) {
   .section-cta {
-    background-color: #ababab;
+    background-color: #5e5e5e;
+    background-color: #0006;
     color: #fafafa;
   }
 }
@@ -1486,6 +1502,7 @@ form button:hover::after {
 }
 @media (prefers-color-scheme: dark) {
   .section-cta .cta-section-title span {
+    color: #00b300;
     color: #00b300;
   }
 }
@@ -1519,6 +1536,11 @@ form button:hover::after {
 @media (min-width: 768px) {
   .section-cta .section-cta-image {
     display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .section-cta .section-cta-image {
+    mix-blend-mode: difference;
   }
 }
 
@@ -1586,6 +1608,11 @@ form button:hover::after {
   font-size: clamp(1.025rem, 2vw, 1.125rem);
   transition: 350ms;
 }
+@media (prefers-color-scheme: dark) {
+  .services .services-container .service-item h3 {
+    color: green;
+  }
+}
 .services .services-container .service-item ul {
   list-style: none;
 }
@@ -1608,6 +1635,11 @@ form button:hover::after {
   color: green;
   transition-delay: 350ms;
   transition: calc(250ms / 2);
+}
+@media (prefers-color-scheme: dark) {
+  .services .services-container .service-item:hover h3 {
+    color: #00b300;
+  }
 }
 @keyframes service-card {
   50% {
