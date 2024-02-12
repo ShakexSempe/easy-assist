@@ -377,7 +377,7 @@ dialog h3 {
 }
 dialog h4 {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
   text-wrap: pretty;
   text-wrap: balance;
   text-transform: capitalize;
@@ -778,13 +778,13 @@ form button:hover::after {
 .contact .contact-item .title {
   text-transform: capitalize;
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
   transition: 0.25s;
   position: relative;
 }
 .contact .contact-item .title h3 {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
 }
 .contact .contact-item .title i, .contact .contact-item .title img {
   transform: translateY(-1rem) scale(1.1);
@@ -1352,7 +1352,7 @@ form button:hover::after {
 }
 .banner p {
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
 }
 
 .hero-grid {
@@ -1390,7 +1390,7 @@ form button:hover::after {
   font-weight: 500;
   font-size: 1rem;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
   cursor: default;
   transition: 250ms;
 }
@@ -1561,7 +1561,7 @@ form button:hover::after {
   }
 }
 .services .services-container {
-  margin-bottom: 1rem;
+  margin-block: 10vh;
   display: grid;
   row-gap: 5vh;
 }
@@ -1573,7 +1573,7 @@ form button:hover::after {
 }
 @media (min-width: 820px) {
   .services .services-container {
-    column-gap: 5vw;
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -1582,21 +1582,23 @@ form button:hover::after {
   background: #fafafa;
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0.125rem 0.5rem 0.5rem rgba(0, 128, 0, 0.1), 0rem 0rem 0.25rem rgba(0, 0, 0, 0.08);
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0.125rem 0.5rem 0.5rem rgba(0, 128, 0, 0.05), 0rem 0rem 1rem rgba(0, 0, 0, 0.05);
 }
 .services .services-container .service-item h3 {
   margin-bottom: 1rem;
   color: green;
   font-size: 1rem;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1.025rem, 2vw, 1.125rem);
 }
 .services .services-container .service-item ul {
   list-style: none;
 }
 .services .services-container .service-item ul li {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-size: clamp(1rem, 1.5vw, 1.05rem);
+  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1vw, 1rem);
   text-wrap: balance;
 }
 @media (prefers-color-scheme: dark) {
