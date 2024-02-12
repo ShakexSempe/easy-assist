@@ -4,10 +4,11 @@
 form {
     @include abstracts.sm {
         width: 50%;
-        border-radius: .25rem;
+        border-radius: .5rem;
+        padding: 5vh 5vw;
     }
-    background-color: abstracts.$overlay-blue-dark;
-    background-color: abstracts.$brand-dark;
+    // background-color: abstracts.$brand-dark;
+    background:radial-gradient(abstracts.$brand, abstracts.$brand-dark);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -15,9 +16,13 @@ form {
     margin: 0vh auto 5vh;
     padding: 10vh 5vw;
 
-    h2 {
-        color: abstracts.$text-light;
-    }
+    .footer-section-title {
+        // color: #fff000;
+        text-transform: capitalize;
+        margin-bottom: 10vh;
+        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+}
 
     .input-div {
         position: relative;
@@ -34,7 +39,7 @@ form {
         }
 
         input, textarea {
-            padding: .65rem .5rem;
+            padding: .75rem .5rem;
             width: 100%;
             border-radius: .25rem;
             transition: .5s;
@@ -44,9 +49,9 @@ form {
             background: abstracts.$main-background-dark;
             color: abstracts.$text-light;
             // WIDE SCREENS INPUT = SMALLER PADDING
-            @include abstracts.sm {
-                padding: .5rem;
-            }
+            // @include abstracts.sm {
+            //     padding: .5rem;
+            // }
 
             &:invalid {
                 background-color:#ddd;
@@ -82,7 +87,7 @@ form {
         width: 11rem;
         display: flex;
         justify-content: space-between;
-        padding:  1rem;
+        padding:  0.75rem;
         position: relative;
 
         color: inherit;

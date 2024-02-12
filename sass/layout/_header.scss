@@ -182,16 +182,6 @@
                             }
                         }
 
-                        i {
-                            width: 2.5rem;
-                            text-align: center;
-                            padding: 0.5rem;
-                            color: abstracts.$text-light;
-                            background: abstracts.$overlay-blue-darkest;
-                            margin-right: 0.5em;
-                            opacity: 0.7;
-                            border-radius: 0.25rem;
-                        }
 
                         .icon {
                             border-radius: 0.25rem;
@@ -204,7 +194,7 @@
                         // LIST ITEM HOVER 
                         &:hover {
                             a {
-                                color: abstracts.$text-light;
+                                color: abstracts.$brand;
                                 transition: .25s;
 
                                 &::after {

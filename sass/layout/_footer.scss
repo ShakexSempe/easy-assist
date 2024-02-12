@@ -9,17 +9,11 @@
         color: #eee;
         min-height: 100vh;
         width: 100%;
-        @media (min-width: 1024px) {
-            padding: 10vh 5vw 5vh;
+        @include abstracts.md {
+            padding: 5vh 5vw 5vh;
         }
         // SECTION-TITLE
-        .footer-section-title {
-                // color: #fff000;
-                text-transform: capitalize;
-                margin-bottom: 10vh;
-                font-size: 2rem;
-                font-size: clamp(2rem, 4vw, 2.25rem);
-        }
+        
 
         
         

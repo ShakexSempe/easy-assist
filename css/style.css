@@ -53,6 +53,7 @@ main {
 
 section {
   width: 100%;
+  scroll-margin-top: 5vh;
 }
 section .section-title {
   font-size: 2rem;
@@ -395,8 +396,7 @@ dialog p::after {
 }
 
 form {
-  background-color: #29323d;
-  background-color: #003300;
+  background: radial-gradient(green, #003300);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -406,11 +406,15 @@ form {
 @media (min-width: 576px) {
   form {
     width: 50%;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    padding: 5vh 5vw;
   }
 }
-form h2 {
-  color: #f4f4f4;
+form .footer-section-title {
+  text-transform: capitalize;
+  margin-bottom: 10vh;
+  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 form .input-div {
   position: relative;
@@ -425,7 +429,7 @@ form .input-div label {
   transition: 0.25s;
 }
 form .input-div input, form .input-div textarea {
-  padding: 0.65rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   width: 100%;
   border-radius: 0.25rem;
   transition: 0.5s;
@@ -434,11 +438,6 @@ form .input-div input, form .input-div textarea {
   font-weight: 500;
   background: #e6e6e6;
   color: #f4f4f4;
-}
-@media (min-width: 576px) {
-  form .input-div input, form .input-div textarea {
-    padding: 0.5rem;
-  }
 }
 form .input-div input:invalid, form .input-div textarea:invalid {
   background-color: #ddd;
@@ -462,7 +461,7 @@ form button {
   width: 11rem;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.75rem;
   position: relative;
   color: inherit;
   background-color: linear-gradient(0deg, green, limegreen);
@@ -868,16 +867,10 @@ form button:hover::after {
   min-height: 100vh;
   width: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #footer .footer {
-    padding: 10vh 5vw 5vh;
+    padding: 5vh 5vw 5vh;
   }
-}
-#footer .footer .footer-section-title {
-  text-transform: capitalize;
-  margin-bottom: 10vh;
-  font-size: 2rem;
-  font-size: clamp(2rem, 4vw, 2.25rem);
 }
 #footer .footer .footer-bottom {
   scroll-margin-top: 5vh;
@@ -1088,7 +1081,7 @@ form button:hover::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #999999;
+    color: #bfbfbf;
     width: 100%;
     padding-bottom: 0.5rem;
     font-size: 1rem;
@@ -1117,23 +1110,13 @@ form button:hover::after {
   #nav .nav-list .links-container ul li a.active .icon {
     opacity: 1;
   }
-  #nav .nav-list .links-container ul li i {
-    width: 2.5rem;
-    text-align: center;
-    padding: 0.5rem;
-    color: #f4f4f4;
-    background: #15191e;
-    margin-right: 0.5em;
-    opacity: 0.7;
-    border-radius: 0.25rem;
-  }
   #nav .nav-list .links-container ul li .icon {
     border-radius: 0.25rem;
     position: relative;
     opacity: 0.4;
   }
   #nav .nav-list .links-container ul li:hover a {
-    color: #f4f4f4;
+    color: green;
     transition: 0.25s;
   }
   #nav .nav-list .links-container ul li:hover a::after {
@@ -1162,7 +1145,7 @@ form button:hover::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #999999;
+    color: #e6e6e6;
   }
   #nav .nav-list .links-container .contact-links a span {
     height: 1rem;
