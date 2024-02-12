@@ -426,7 +426,7 @@ form .input-div label {
   top: 0%;
   transform: translateY(-0.5em);
   text-transform: capitalize;
-  transition: 0.25s;
+  transition: 350ms;
 }
 form .input-div input, form .input-div textarea {
   padding: 0.75rem 0.5rem;
