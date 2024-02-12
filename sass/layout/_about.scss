@@ -13,6 +13,7 @@
 
 
     article {
+
         p {
             margin-bottom: 1rem;
             &:first-letter {
@@ -22,6 +23,18 @@
                 content: '.';
             }
         }
+
+        a {
+            color: abstracts.$brand;
+            text-transform: capitalize;
+            text-decoration-color: inherit;
+
+            &:hover {
+                color: abstracts.$brand-light;
+                text-decoration-color: transparent;
+            }
+        }
+
     }
 }
 

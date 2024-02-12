@@ -67,7 +67,9 @@
             &:hover {
 
                 h3 {
-                color: abstracts.$brand;
+                    color: abstracts.$brand;
+                    transition-delay: 350ms;
+                    transition: calc(250ms / 2);
                 }
 
                 animation: service-card 350ms ease-in-out;

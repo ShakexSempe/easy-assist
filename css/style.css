@@ -706,6 +706,15 @@ form button:hover::after {
 .about article p::after {
   content: ".";
 }
+.about article a {
+  color: green;
+  text-transform: capitalize;
+  text-decoration-color: inherit;
+}
+.about article a:hover {
+  color: #00b300;
+  text-decoration-color: transparent;
+}
 
 #contact {
   scroll-margin-top: 5vh;
@@ -1596,6 +1605,8 @@ form button:hover::after {
 }
 .services .services-container .service-item:hover h3 {
   color: green;
+  transition-delay: 350ms;
+  transition: calc(250ms / 2);
 }
 @keyframes service-card {
   50% {
