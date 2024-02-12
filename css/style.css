@@ -39,6 +39,7 @@ body p {
 body .icon {
   width: 1.025rem;
   height: auto;
+  height: 1.025rem;
   transition: 0.25s;
 }
 @media (prefers-color-scheme: dark) {
@@ -165,6 +166,7 @@ section .section-title.active-item span {
 .bottom-nav .link-item a .icon {
   opacity: 0.7;
   width: 1.125rem;
+  height: auto;
   position: absolute;
 }
 .bottom-nav .link-item a .solid-icon {
@@ -1510,12 +1512,17 @@ form button:hover::after {
   padding: 0 0.125rem;
 }
 .section-cta .cta-grid {
-  margin: 1rem 0;
+  margin: 5vh 0 1rem;
 }
 .section-cta .cta-grid .section-cta-item {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+}
+.section-cta .cta-grid .section-cta-item a {
+  font-size: 1.025rem;
+  font-size: clamp(1.025rem, 1.25vw, 1.125rem);
 }
 .section-cta .cta-grid .section-cta-item:hover a {
   text-decoration-color: green;
