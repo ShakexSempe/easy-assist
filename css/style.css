@@ -23,6 +23,7 @@ body a {
   text-decoration: underline transparent;
   text-underline-offset: 2px;
   transition: 350ms;
+  text-wrap: pretty;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   text-transform: capitalize;
