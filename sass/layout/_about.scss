@@ -19,12 +19,13 @@
             &:first-letter {
                 text-transform: capitalize;
             }
-            &::after {
-                content: '.';
-            }
+            // &::after {
+            //     content: '.';
+            // }
         }
 
         a {
+            display: block;
             color: abstracts.$brand;
             text-transform: capitalize;
             text-decoration-color: inherit;

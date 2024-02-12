@@ -709,10 +709,8 @@ form button:hover::after {
 .about article p:first-letter {
   text-transform: capitalize;
 }
-.about article p::after {
-  content: ".";
-}
 .about article a {
+  display: block;
   color: green;
   text-transform: capitalize;
   text-decoration-color: inherit;
