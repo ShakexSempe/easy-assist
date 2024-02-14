@@ -1522,7 +1522,7 @@ form button:hover::after {
   transition-delay: 500ms;
 }
 .section-cta .brand-title {
-  background-image: linear-gradient(0deg, #003300, #00b300);
+  background-image: linear-gradient(0deg, #003300, #00cc00);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

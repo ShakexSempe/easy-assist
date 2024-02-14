@@ -86,7 +86,7 @@
 
     // BRAND BG TITLE
     .brand-title {
-        background-image: linear-gradient(0deg, abstracts.$brand-dark, abstracts.$brand-light);
+        background-image: linear-gradient(0deg, abstracts.$brand-dark, abstracts.$brand-lighter);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
