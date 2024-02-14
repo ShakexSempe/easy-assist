@@ -1485,7 +1485,7 @@ form button:hover::after {
     color: #fafafa;
   }
 }
-.section-cta .cta-section-title {
+.section-cta .cta-section-title, .section-cta .brand-title {
   font-size: 2rem;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
@@ -1493,32 +1493,38 @@ form button:hover::after {
   margin-bottom: 1rem;
   transition: 1000ms ease;
 }
-.section-cta .cta-section-title span {
+.section-cta .cta-section-title span, .section-cta .brand-title span {
   color: darkgreen;
   transition: 1000ms ease;
 }
 @media (prefers-color-scheme: dark) {
-  .section-cta .cta-section-title span {
+  .section-cta .cta-section-title span, .section-cta .brand-title span {
     color: #00b300;
     color: #00b300;
   }
 }
-.section-cta .cta-section-title.io-item {
+.section-cta .cta-section-title.io-item, .section-cta .brand-title.io-item {
   transform: translateY(2rem);
   opacity: 0.4;
 }
-.section-cta .cta-section-title.io-item span {
+.section-cta .cta-section-title.io-item span, .section-cta .brand-title.io-item span {
   letter-spacing: 0.5rem;
   opacity: 0;
 }
-.section-cta .cta-section-title.active-item {
+.section-cta .cta-section-title.active-item, .section-cta .brand-title.active-item {
   transform: translateY(0);
   opacity: 1;
 }
-.section-cta .cta-section-title.active-item span {
+.section-cta .cta-section-title.active-item span, .section-cta .brand-title.active-item span {
   letter-spacing: normal;
   opacity: 1;
   transition-delay: 500ms;
+}
+.section-cta .brand-title {
+  background-image: linear-gradient(0deg, #003300, #00b300);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .section-cta .cta-flex-container {
   display: flex;

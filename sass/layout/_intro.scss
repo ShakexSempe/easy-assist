@@ -41,7 +41,7 @@
         color: #fafafa;
     }
 
-    .cta-section-title {
+    .cta-section-title, .brand-title {
         font-size: 2rem;
         font-size: abstracts.$font-clamp-xlg;
         line-height: 1.2;
@@ -82,6 +82,14 @@
             }
         }
 
+    }
+
+    // BRAND BG TITLE
+    .brand-title {
+        background-image: linear-gradient(0deg, abstracts.$brand-dark, abstracts.$brand-light);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
     .cta-flex-container {
