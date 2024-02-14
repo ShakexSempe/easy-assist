@@ -108,6 +108,7 @@ section .section-title.active-item span {
   bottom: 0;
   width: 100%;
   background: linear-gradient(0deg, #003300, #004d00);
+  background: #001a00;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1594,7 +1595,7 @@ form button:hover::after {
   padding: 10vh 5vw;
   min-height: 90vh;
   background: #fafafa;
-  background: #e6e6e6;
+  background: #d9d9d9;
 }
 @media (prefers-color-scheme: dark) {
   .services {

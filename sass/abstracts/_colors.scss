@@ -4,12 +4,7 @@ $main-background: #fafafa;
 $main-background-dark: #0000;
 $main-background-light: #f4f4f4;
 $main-background-dark: hsl(0, 0%, 90%);
-
-// @media (prefers-color-scheme: dark){
-//     $main-background: #222;
-//     $main-background-light: #333;
-//     $main-background-dark: #111;
-// }
+$main-background-darker: hsl(0, 0%, 85%);
 
 // BACKGROUND COLORS
 $header-main-bg: #fafafa;
@@ -31,6 +26,7 @@ $brand: hsl(209, 20%, 75%);
 $brand: hsl(120, 100%, 25%);
 $brand-light: hsl(120, 100%, 35%);
 $brand-dark:hsl(120, 100%, 10%);
+$brand-footer:hsl(120, 100%, 5%);
 $brand-border: hsla(210, 19%, 75%, .5);
 $span-crimson: #dc143c;
 $crimson-border: #dc143c8c;
