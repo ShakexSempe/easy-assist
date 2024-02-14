@@ -2,7 +2,7 @@
 
 // FORM
 form {
-    @include abstracts.sm {
+    @include abstracts.md {
         width: 50%;
         border-radius: .5rem;
         padding: 5vh 5vw;
@@ -21,7 +21,8 @@ form {
         text-transform: capitalize;
         margin-bottom: 10vh;
         font-size: 2rem;
-        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-size: abstracts.$font-clamp-md;
+        font-size: clamp(2rem, 3vw, 2rem);
 }
 
     .input-div {
