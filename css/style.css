@@ -1685,7 +1685,7 @@ form button:hover::after {
 }
 @media (prefers-color-scheme: dark) {
   .services .services-container .service-item h3 {
-    color: green;
+    color: #00b300;
   }
 }
 .services .services-container .service-item ul {
@@ -1701,6 +1701,12 @@ form button:hover::after {
   .services .services-container .service-item {
     background-color: #333;
     color: #fafafa;
+  }
+  .services .services-container .service-item::before {
+    background: #333;
+  }
+  .services .services-container .service-item::after {
+    background: #444;
   }
 }
 .services .services-container .service-item:hover {
