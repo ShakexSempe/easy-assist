@@ -706,8 +706,14 @@ form button:hover::after {
     background-color: #333;
   }
 }
+.about article {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
 .about article p {
   margin-bottom: 1rem;
+  max-width: 600px;
 }
 .about article p:first-letter {
   text-transform: capitalize;
@@ -725,6 +731,33 @@ form button:hover::after {
 @media (prefers-color-scheme: dark) {
   .about article a {
     color: #00b300;
+  }
+}
+.about article::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25%;
+  right: 0%;
+  width: 10rem;
+  height: 20rem;
+  transform: rotate(40deg);
+  border: 2px solid green;
+  background: #ddd;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.125;
+}
+@media (min-width: 768px) {
+  .about article {
+    background-image: url("/img/hero-3.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: 50%;
+  }
+  .about article::after {
+    display: none;
   }
 }
 
@@ -1624,11 +1657,26 @@ form button:hover::after {
   padding: 1rem;
   position: relative;
   isolation: isolate;
-  box-shadow: 0.125rem 0.5rem 0.5rem rgba(0, 128, 0, 0.05), 0rem 0rem 1rem rgba(0, 0, 0, 0.05);
+}
+.services .services-container .service-item:before, .services .services-container .service-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+}
+.services .services-container .service-item::before {
+  background: #fafafa;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 128, 0, 0.15), 0rem 0rem 1rem rgba(0, 0, 0, 0.05);
+}
+.services .services-container .service-item::after {
+  background: #fff;
+  box-shadow: 0rem 0rem 0.5rem rgba(0, 128, 0, 0.25), 0rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 .services .services-container .service-item h3 {
   margin-bottom: 1rem;
-  color: #003300;
+  color: green;
   font-size: 1rem;
   font-size: clamp(1.025rem, 2vw, 1.125rem);
   transition: 350ms;
@@ -1657,7 +1705,7 @@ form button:hover::after {
   animation: service-card 350ms ease-in-out;
 }
 .services .services-container .service-item:hover h3 {
-  color: green;
+  color: #00b300;
   transition-delay: 350ms;
   transition: calc(250ms / 2);
 }
@@ -1665,6 +1713,12 @@ form button:hover::after {
   .services .services-container .service-item:hover h3 {
     color: #00b300;
   }
+}
+.services .services-container .service-item:hover::before {
+  opacity: 0;
+}
+.services .services-container .service-item:hover::after {
+  opacity: 1;
 }
 @keyframes service-card {
   50% {

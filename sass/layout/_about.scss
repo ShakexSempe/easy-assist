@@ -12,15 +12,16 @@
 
 
     article {
-
+        // border: 2px solid red;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
         p {
             margin-bottom: 1rem;
+            max-width: 600px;
             &:first-letter {
                 text-transform: capitalize;
             }
-            // &::after {
-            //     content: '.';
-            // }
         }
 
         a {
@@ -38,6 +39,40 @@
                 color: abstracts.$brand-light;
             }
         }
+
+        // DECORATION
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -25%;
+            right: 0%;
+            width: 10rem;
+            height: 20rem;
+            transform: rotate(40deg);
+            border: 2px solid green;
+            background: #ddd;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.125;
+            
+            
+        }
+
+        @include abstracts.md {
+
+            background-image: url('/img/hero-3.jpg');
+            background-repeat: no-repeat;
+            background-position: right;
+            background-attachment: fixed;
+            background-size: 50%;
+            
+
+            &::after {
+                display: none;
+            }
+        }
+
 
     }
 }
