@@ -47,8 +47,10 @@
         line-height: 1.2;
         text-transform: capitalize;
         margin-bottom: 1rem;
+        transition: 1000ms ease;
         span {
             color: darkgreen;
+            transition: 1000ms ease;
         }
         @media (prefers-color-scheme: dark){
             span {
@@ -56,6 +58,30 @@
                 color: abstracts.$brand-light;
             }
         }
+        
+        // IO CLASS
+        &.io-item {
+            transform: translateY(2rem);
+            opacity: .4;
+
+            span {
+                letter-spacing: 0.5rem;
+                opacity: 0;
+            }
+        }
+
+        // ACTIVE IO CLASS
+        &.active-item {
+            transform: translateY(0);
+            opacity: 1;
+
+            span {
+                letter-spacing: normal;
+                opacity: 1;
+                transition-delay: 500ms;
+            }
+        }
+
     }
 
     .cta-flex-container {
