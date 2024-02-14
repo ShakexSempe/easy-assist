@@ -1322,7 +1322,6 @@ form button:hover::after {
 
 .header-io::after {
   opacity: 1;
-  background: green;
   background: #fafafa;
   box-shadow: 0rem 0.5rem 0.5rem rgba(41, 50, 60, 0.025);
 }

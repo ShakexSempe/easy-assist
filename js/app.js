@@ -42,7 +42,7 @@ console.log(activePage);
 // ********** HERO SECTION INTERSECTION OBSERVER ************
 const hero = document.getElementById('home');
 const heroOptions = {
-  rootMargin: '-30% 0px 0px 0px',
+  rootMargin: '-80% 0px 0px 0px',
 }
 const heroObserver = new IntersectionObserver(
   function(
