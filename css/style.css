@@ -1668,7 +1668,7 @@ form button:hover::after {
 }
 .services .services-container .service-item::before {
   background: #f7f7f7;
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 102, 0, 0.125), 0rem 0rem 1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 77, 0, 0.125), 0rem 0rem 1rem rgba(0, 0, 0, 0.05);
 }
 .services .services-container .service-item::after {
   transition: 500ms ease;
