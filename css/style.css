@@ -766,7 +766,6 @@ form button:hover::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -25%;
   right: 0%;
   width: 10rem;
   height: 20rem;
@@ -775,7 +774,7 @@ form button:hover::after {
   background: #ddd;
   border-radius: 50%;
   z-index: -1;
-  opacity: 0.125;
+  opacity: 0.1;
 }
 @media (min-width: 768px) {
   .about article {
