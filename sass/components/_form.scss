@@ -34,42 +34,39 @@ form {
         label {
             position: absolute;
             top: 0%;
-            transform: translateY(-.5em);
+            transform: translateY(-1rem);
             text-transform: capitalize;
             transition: 350ms;
+            &::after {
+                position: absolute;
+                content: ':';
+                margin-left: 0.25rem;
+                transition: 500ms;
+            }
         }
 
         input, textarea {
-            padding: .75rem .5rem;
-            width: 100%;
-            border-radius: .25rem;
-            transition: .5s;
-            border: none;
+            // background: abstracts.$main-background-dark;
+            // color: abstracts.$text-light;
             font-size: 1rem;
             font-weight: 500;
-            background: abstracts.$main-background-dark;
-            color: abstracts.$text-light;
-            // WIDE SCREENS INPUT = SMALLER PADDING
-            // @include abstracts.sm {
-            //     padding: .5rem;
-            // }
 
-            &:invalid {
-                background-color:#ddd;
-                color: abstracts.$text-invalid;
-            }
+            padding: .75rem .5rem;
+            width: 100%;
+            
+            border-radius: .25rem;
+            transition: 500ms;
+            border-color: transparent;      
+            
             
             &::placeholder {
-                font-weight: 500;
-                color: #000;
                 text-transform: capitalize;
                 opacity: 0;
-                transition: .25s;
+                transition: 250ms;
 
             }
 
             &:focus, &:hover {
-                // outline-color: red;
                 &::placeholder {
                     opacity: .6;
                 }
@@ -78,8 +75,11 @@ form {
         // input hover state
         &:hover, &:focus {
             label {
-                transform: translateX(1em) translateY(-.2em);
-                color: abstracts.$text-light;
+                transform: translateY(-0.5rem);
+                &::after {
+                    opacity: 0;
+                    transform: translateX(0.25rem);
+                }
             }
         }
     }

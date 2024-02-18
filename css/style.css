@@ -435,38 +435,39 @@ form .input-div {
 form .input-div label {
   position: absolute;
   top: 0%;
-  transform: translateY(-0.5em);
+  transform: translateY(-1rem);
   text-transform: capitalize;
   transition: 350ms;
 }
+form .input-div label::after {
+  position: absolute;
+  content: ":";
+  margin-left: 0.25rem;
+  transition: 500ms;
+}
 form .input-div input, form .input-div textarea {
+  font-size: 1rem;
+  font-weight: 500;
   padding: 0.75rem 0.5rem;
   width: 100%;
   border-radius: 0.25rem;
-  transition: 0.5s;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  background: #e6e6e6;
-  color: #f4f4f4;
-}
-form .input-div input:invalid, form .input-div textarea:invalid {
-  background-color: #ddd;
-  color: #000;
+  transition: 500ms;
+  border-color: transparent;
 }
 form .input-div input::placeholder, form .input-div textarea::placeholder {
-  font-weight: 500;
-  color: #000;
   text-transform: capitalize;
   opacity: 0;
-  transition: 0.25s;
+  transition: 250ms;
 }
 form .input-div input:focus::placeholder, form .input-div input:hover::placeholder, form .input-div textarea:focus::placeholder, form .input-div textarea:hover::placeholder {
   opacity: 0.6;
 }
 form .input-div:hover label, form .input-div:focus label {
-  transform: translateX(1em) translateY(-0.2em);
-  color: #f4f4f4;
+  transform: translateY(-0.5rem);
+}
+form .input-div:hover label::after, form .input-div:focus label::after {
+  opacity: 0;
+  transform: translateX(0.25rem);
 }
 form button {
   width: 11rem;

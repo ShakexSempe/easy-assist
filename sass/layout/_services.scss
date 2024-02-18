@@ -4,7 +4,6 @@
     padding: 10vh 5vw;
     background: #fafafa;
     background: abstracts.$main-background-darker;
-    // background: linear-gradient(0deg, #ffff 80%, #f4f4f4 60%);
 
     @media (prefers-color-scheme: dark){
         background-color: #222;
@@ -121,4 +120,5 @@
         }
 
     }
+
 }
