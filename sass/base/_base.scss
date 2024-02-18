@@ -64,8 +64,10 @@ body {
         content: '';
         position: absolute;
         inset: 0;
+        width: 100%;
         background: abstracts.$brand;
-        opacity: 0;
+        left: -100vw;
+        opacity: 0.45;
 
         @include abstracts.sm {
             display: none;
@@ -74,7 +76,7 @@ body {
 
     &.active-aside {
         &::after {
-            opacity: 0.45;
+            left: 0;
         }
     }
 }
