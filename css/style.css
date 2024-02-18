@@ -65,7 +65,7 @@ body .icon {
   width: 100%;
   background: green;
   left: -100vw;
-  opacity: 0.45;
+  opacity: 0.35;
 }
 @media (min-width: 576px) {
   .container::after {

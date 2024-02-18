@@ -67,7 +67,7 @@ body {
         width: 100%;
         background: abstracts.$brand;
         left: -100vw;
-        opacity: 0.45;
+        opacity: 0.35;
 
         @include abstracts.sm {
             display: none;
