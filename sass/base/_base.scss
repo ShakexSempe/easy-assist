@@ -13,7 +13,7 @@ body {
         display: block;
         max-width: 100%;
     }
-    
+
     a {
         color: inherit;
         text-decoration: underline transparent;
@@ -22,12 +22,17 @@ body {
         text-wrap: pretty;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         text-transform: capitalize;
         text-wrap: balance;
     }
-    
-    
+
+
     p {
         font-size: 1rem;
         font-size: abstracts.$font-clamp-xsm;
@@ -35,7 +40,7 @@ body {
         line-height: 1.6;
         text-wrap: pretty;
     }
-    
+
 
     .icon {
         width: 1.025rem;
@@ -44,12 +49,35 @@ body {
         transition: 0.25s;
     }
 
-    @media (prefers-color-scheme: dark){
+    @media (prefers-color-scheme: dark) {
         background-color: #333;
         color: #fafafa;
     }
 }
 
+.container {
+    max-width: 100%;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: abstracts.$brand;
+        opacity: 0;
+
+        @include abstracts.sm {
+            display: none;
+        }
+    }
+
+    &.active-aside {
+        &::after {
+            opacity: 0.45;
+        }
+    }
+}
 
 main {
     scroll-margin-top: 5vh;
@@ -85,7 +113,7 @@ section {
             font-size: 1.25rem;
             font-size: abstracts.$font-clamp-md;
 
-            @media (prefers-color-scheme: dark){
+            @media (prefers-color-scheme: dark) {
                 color: abstracts.$brand-light;
             }
         }
@@ -112,15 +140,15 @@ section {
 
 #thanks {
     .home-link {
-            color: abstracts.$text-light;
-            margin: 5vh 0;
-            display: block;
+        color: abstracts.$text-light;
+        margin: 5vh 0;
+        display: block;
 
-            i {
-                color: abstracts.$brand;
-                font-size: 1rem;
-                margin-right: .5rem;
-            }
+        i {
+            color: abstracts.$brand;
+            font-size: 1rem;
+            margin-right: .5rem;
+        }
     }
 }
 

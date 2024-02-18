@@ -6,13 +6,14 @@ const navbar = document.getElementById('navbar');
 const navItems = document.querySelectorAll('.header .nav-list ul li');
 const progressBarStyle = document.querySelector('.progress-bar');
 const bottomNav = document.querySelector('.bottom-nav');
+const container = document.querySelector('.container');
 // HAMBURGER MENU
 const hamburger = document.querySelector('.header #nav .nav-list .hamburger');
 const mobile_menu = document.querySelector('.header #nav .nav-list .links-container');
 const menu_item = document.querySelectorAll('.header #nav .nav-list ul li a');
 const header = document.querySelector('header');
 const navLogo = document.querySelector('.logo');
-// console.log(navLogo);
+console.log(scrollLinks);
 
 /*  FOOTER DATE*/
 const date = document.querySelectorAll('.date');
@@ -124,6 +125,7 @@ item.forEach(item => {
 // HAMBURGER SELECT
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
+  container.classList.toggle('active-aside');
   mobile_menu.classList.toggle('active');
   if(!header.classList.contains("header-io")){
     header.classList.add("header-io");
@@ -136,13 +138,16 @@ menu_item.forEach((item) => {
     hamburger.classList.remove('active');
     mobile_menu.classList.remove('active');
     header.classList.remove("active-header");
+    container.classList.remove("active-aside");
+
   });
 });
 // NAV LOGO CLICK
 navLogo.addEventListener("click", () => {
   hamburger.classList.remove('active');
-    mobile_menu.classList.remove('active');
-    header.classList.remove("active-header");
+  mobile_menu.classList.remove('active');
+  header.classList.remove("active-header");
+  container.classList.remove("active-aside");
 })
 //  PROGRESS BAR
 //  When the user scrolls the page, execute myFunction

@@ -105,11 +105,11 @@
                 background-color: abstracts.$brand-dark;
                 color: abstracts.$nav-links;
                 transition: .5s ease;
-                z-index: 5;
                 
 
                 ul {
                     margin: 1rem 15vw 1rem 5vw;
+                    margin: 1rem 15vw 1rem 1rem;
                     padding: 1rem 0.5rem;
                     
                     display: flex;
@@ -260,6 +260,7 @@
                 // ACTIVE ASIDE = TRANSITION INTO VIEW - LEFT = 0
                 &.active {
                     left: 0;
+                    left: 5vw;
 
                     // LOGO TRANSITIONS INTO VIEW - OPACITY AND TRANSFORM
                     .nav-logo {

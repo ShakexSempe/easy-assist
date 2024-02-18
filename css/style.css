@@ -25,7 +25,12 @@ body a {
   transition: 350ms;
   text-wrap: pretty;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   text-transform: capitalize;
   text-wrap: balance;
 }
@@ -47,6 +52,26 @@ body .icon {
     background-color: #333;
     color: #fafafa;
   }
+}
+
+.container {
+  max-width: 100%;
+  position: relative;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: green;
+  opacity: 0;
+}
+@media (min-width: 576px) {
+  .container::after {
+    display: none;
+  }
+}
+.container.active-aside::after {
+  opacity: 0.45;
 }
 
 main {
@@ -1102,10 +1127,10 @@ form button:hover::after {
     background-color: #003300;
     color: #000;
     transition: 0.5s ease;
-    z-index: 5;
   }
   #nav .nav-list .links-container ul {
     margin: 1rem 15vw 1rem 5vw;
+    margin: 1rem 15vw 1rem 1rem;
     padding: 1rem 0.5rem;
     display: flex;
     flex-direction: column;
@@ -1215,6 +1240,7 @@ form button:hover::after {
   }
   #nav .nav-list .links-container.active {
     left: 0;
+    left: 5vw;
   }
   #nav .nav-list .links-container.active .nav-logo {
     transition: 1.5s;
