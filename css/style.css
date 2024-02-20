@@ -1024,9 +1024,6 @@ form button:hover::after {
 #footer .footer .footer-bottom .footer-item .footer-list li a {
   transition: 0.25s;
 }
-#footer .footer .footer-bottom .footer-item .footer-list li .icon {
-  opacity: 0.7;
-}
 #footer .footer .footer-bottom .footer-item .footer-list li:hover a {
   color: green;
 }
