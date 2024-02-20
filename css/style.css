@@ -63,7 +63,7 @@ body .icon {
   position: absolute;
   inset: 0;
   width: 100%;
-  background: green;
+  background: #001a00;
   left: -100vw;
   opacity: 0.35;
 }
@@ -770,7 +770,7 @@ form button:hover::after {
   width: 10rem;
   height: 20rem;
   transform: rotate(40deg);
-  border: 2px solid green;
+  border: 1px solid green;
   background: #ddd;
   border-radius: 50%;
   z-index: -1;
