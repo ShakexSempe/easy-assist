@@ -682,7 +682,7 @@ form button:hover::after {
 }
 
 .skip-link {
-  background: #475462;
+  background: green;
   position: fixed;
   z-index: 99;
   top: 0;
@@ -695,6 +695,7 @@ form button:hover::after {
   text-transform: capitalize;
   transition: 0.5s;
   transform: translateY(-10vh);
+  text-decoration-color: inherit;
 }
 .skip-link:focus {
   transform: translateY(0);
@@ -1342,7 +1343,7 @@ form button:hover::after {
   #nav .nav-list ul li i, #nav .nav-list ul li .icon {
     display: none;
   }
-  #nav .nav-list ul li:hover {
+  #nav .nav-list ul li:hover a {
     color: green;
   }
   #nav .nav-list ul li:hover::before {

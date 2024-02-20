@@ -418,7 +418,9 @@
 
                     // UNDERLINE TRANSITION OUT IN LI HOVER
                     &:hover {
-                        color: abstracts.$brand;
+                        a {
+                            color: abstracts.$brand;
+                        }
 
                         &::before {
                             width: 50%;

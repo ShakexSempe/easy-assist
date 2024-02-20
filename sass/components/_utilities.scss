@@ -3,7 +3,7 @@
 
 // SKIP LINK
 .skip-link {
-    background: abstracts.$overlay-blue-light;
+    background: abstracts.$brand;
     position: fixed;
     z-index: 99;
     top: 0;
@@ -16,6 +16,7 @@
     text-transform: capitalize;
     transition: .5s;
     transform: translateY(-10vh);
+    text-decoration-color: inherit;
     &:focus {
         transform: translateY(0);
     }
